@@ -64,4 +64,4 @@ function tipoAutores() {
   }
 }
 
-autores.addEventListener("change", tipoAutores);
+autores.addEventListener("input", tipoAutores);
