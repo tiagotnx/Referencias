@@ -82,6 +82,7 @@ body {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 #botao {
@@ -90,13 +91,10 @@ body {
   align-items: center;
 }
 
-#botao button {
-  margin: 20px;
-}
-
 label {
   display: flex;
   flex-direction: column;
+  width: 300px;
 }
 
 button {
@@ -110,6 +108,7 @@ input {
   background-color: #e1e1e1;
   border-radius: 5px;
   padding: 5px;
+  margin: 0 auto;
 }
 
 form {
@@ -127,7 +126,7 @@ button {
   background-color: #003cfe;
   color: white;
   font-size: 1.3rem;
-  margin: 0 20px 10px 0;
+  margin: 20px 0;
   transition: 0.5s;
 }
 
@@ -155,18 +154,34 @@ b {
   .grid {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .main {
     margin: 0 auto;
     padding: 0;
   }
+
+  html,
+  body {
+    height: auto;
+  }
 }
 
 @media (max-width: 630px) {
-  .select,
-  .grid {
+  .select {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+  }
+
+  .select select,
+  input,
+  p,
+  button {
+    width: 300px;
+  }
+
+  img {
+    margin: 0 auto;
   }
 }
