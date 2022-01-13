@@ -64,4 +64,4 @@ function tipoAutores() {
   }
 }
 
-autores.addEventListener("blur", tipoAutores);
+autores.addEventListener("change", tipoAutores);
