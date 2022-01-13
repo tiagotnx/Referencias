@@ -61,7 +61,7 @@ body {
 }
 
 .main section div {
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 
 .container {
@@ -81,8 +81,6 @@ body {
   background-color: #e1e1e1;
   border-radius: 5px;
   padding: 5px;
-  margin-bottom: 10px;
-  margin: 0 auto;
 }
 
 #botao {
