@@ -9,38 +9,41 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
-<body>
-    <header>
+<body class="flex center">
+    <header class="header">
         <h1>Referências</h1>
     </header>
-    <main>
-        <figure>
-            <img src="img/imagem.svg" alt="imagem Referências">
-        </figure>
-        
-        <section>
+    <main class="main flex">
+
+        <section class="grid">
+            <figure>
+                <img src="img/imagem.svg" alt="imagem Referências">
+            </figure>
+            
             <div>
-            <label for="tipo">Selecione o tipo de referência
-            <select name="tipo" id="tipo">
-                <option value="artigo">Artigo</option>
-                <option value="livro">Livro</option>
-                <option value="site">Site</option>
-            </select>
-        </label>
-            <label for="autores">Selecione a quantidade de autores
-            <select name="autores" id="autores">
-                <option value="1autor">1 autor</option>
-                <option value="2autores">2 autores</option>
-                <option value="3autores">3 ou mais autores</option>
-            </select>
-        </div>
-        </label>
-            <form action="" id="form" onsubmit="return false">
+                <div class="select">
+                <label for="tipo">Selecione o tipo de referência
+                <select name="tipo" id="tipo">
+                    <option value="artigo">Artigo</option>
+                    <option value="livro">Livro</option>
+                    <option value="site">Site</option>
+                </select>
+            </label>
+                <label for="autores">Selecione a quantidade de autores
+                <select name="autores" id="autores">
+                    <option value="1autor">1 autor</option>
+                    <option value="2autores">2 autores</option>
+                    <option value="3autores">3 ou mais autores</option>
+                </select>
+            </div>
+            </label>
+                <form action="" id="form" onsubmit="return false" class="grid">
 
-            </form>
-            <div id="botao"></div>
+                </form>
+                <div id="botao"></div>
 
-            <div id="referencia"></div>
+                <div id="referencia"></div>
+            </div>
         </section>
     </main>
 </body>

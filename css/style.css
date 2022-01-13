@@ -8,47 +8,87 @@
     font-family: poppins;
 }
 
-header {
-    background-color: #003CFE;
+
+:root {
+    --azul: #003CFE;
+    --fonte-header: #ffffff;
+}
+
+html, body { height: 100% }
+
+body {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+
+.header {
+    background-color: var(--azul);
     height: 70px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--fonte-header);
     flex-wrap: wrap;
 }
 
-main {
-    display: flex;
+.main {
+    flex: 1;
     justify-content: center;
-    flex-wrap: wrap;
+    max-width: 968px;
+    margin: 50px auto;
 }
 
-section {
-    width: 45vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 
-img {
+.main img {
     width: 100%;
-    height: 80vh;
 }
 
-select {
+.main section div {
+    margin: 0 auto;
+}
+
+.select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+
+.select select {
     width: 300px;
     height: 40px;
     background-color: #E1E1E1;
-    margin: 0 20px 10px 0;
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
+#botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao button {
+    margin: 20px;
+}
 
 label {
     display: flex;
@@ -65,17 +105,9 @@ input {
     width: 300px;
     height: 40px;
     background-color: #E1E1E1;
-    margin: 0 20px 10px 0;
     border-radius: 5px;
     padding: 5px;
     
-}
-
-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 form {
@@ -86,9 +118,6 @@ form {
     flex-wrap: wrap;
 }
 
-figure {
-    width: 30vw;
-}
 
 button {
     width: 300px;
@@ -111,12 +140,10 @@ p {
     font-size: 16px;
     margin: 20px;
     background-color: #E1E1E1;
-    width: 500px;
+    width: 300px;
     height: 100px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline;
     border-radius: 5px;
 }
 
@@ -129,4 +156,20 @@ div#referencia {
     flex-direction: column;
 }
 
-@media screen and (min-width: 758px) { }
+@media (max-width: 990px) {
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .main {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 630px) {
+    .select {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+}
