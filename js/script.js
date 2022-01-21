@@ -35,7 +35,9 @@ function tipoAutores() {
       for (let prod in itens) {
         if (prod == "campo") {
           form.appendChild(labels).innerText = itens[prod];
+          form.appendChild(labels).setAttribute("class", "fadeIn");
           labels.appendChild(inputs).setAttribute("id", itens[prod]);
+          labels.appendChild(inputs).setAttribute("class", "fadeIn");
         } else {
           form.appendChild(labels).setAttribute("id", itens[prod]);
           labels.appendChild(inputs).setAttribute("id", itens[prod]);
@@ -56,7 +58,7 @@ function tipoAutores() {
       const editora = document.querySelector("#Editora").value;
       const ano = document.querySelector("#Ano").value;
 
-      divReferencia.innerHTML += `<p>${sobrenome.toUpperCase()}, ${pronomes.substr(
+      divReferencia.innerHTML += `<p class="fadeInLeft">${sobrenome.toUpperCase()}, ${pronomes.substr(
         0,
         1
       )}. ${titulo.bold()}. ${edicao}. ed. ${cidade}: ${editora}, ${ano}.</p>`;
